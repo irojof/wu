@@ -1,0 +1,336 @@
+<html>
+	<body>
+		<input disabled hidden name="transaction_uuid" id="transaction_uuid">
+		<input disabled hidden name="customer_uuid" id="customer_uuid">
+		<input disabled hidden name="customer_uuid_end" id="customer_uuid_end">
+		<table width="100%" border="0" cellspacing="2">
+			<th colspan="20">SOF Form</th>
+			<tr>
+			</tr>
+			<tr>
+				<td colspan="20"><u><b>Customer information</b></u></td>
+				<tr>
+					<td colspan="20" >Full Name (s): <u><label id="customer_first_name" name="customer_first_name"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20">Last Name (s): <u><label id="customer_last_name" name="customer_last_name"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan= "4">Date of Birth (DD/MM/YY): <u><label id="customer_date_birth" name="customer_date_birth"></label></u></td>
+					<td colspan= "16">Born in city: <u><label id="customer_place_birth" name="customer_place_birth"></label></u></td>
+				</tr>
+				
+				<tr>
+					<td colspan= "4">Country of birth: <u><label id="country_id" name="country_id"></label></u></td>
+					<td colspan= "16">Nationality: <u><label id="customer_nacionality" name="customer_nacionality"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20" ><b>Residency: </b><u><label id="customer_resident" name="customer_resident"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20">Address in Aruba: <u><label id="customer_address_1" name="customer_address_1"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20">Address Abroad: <u><label id="customer_address_2" name="customer_address_2"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="4">Mobile #: <u><label id="customer_mobile" name="customer_mobile"></label></u></td>
+					<td colspan="16">Telephone #: <u><label id="customer_phone" name="customer_phone"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20">Name Company/ employer: <u><label id="sof_company_name" name="sof_company_name"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="4">Occupation: <u><label id="sof_occupation" name="sof_occupation"></label></u></td>
+					<td colspan="16">Department: <u><label id="sof_department" name="sof_department"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20"><u><b>Beneficiary information: (as on identification)</b></u></td>
+				</tr>
+				<tr>
+					<td colspan="20">Full Name beneficiary: <u><label id="customer_first_name_end" name="customer_first_name_end"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20">Adress: <u><label id="customer_address_1_end" name="customer_address_1_end"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan= "4">City:  <u><label id="customer_city_end" name="customer_city_end"></label></u></td>
+					<td colspan= "16">Country: <u><label id="country_id_end" name="country_id_end"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan= "1"><u><b>Do you know the beneficiary?</b></u></td>
+					<td colspan= "2"><input disabled type="checkbox" id="transaction_know_contact_person" name="transaction_know_contact_person" value="1">Yes</td>
+					<td colspan= "8"><input disabled type="checkbox" id="transaction_know_contact_person2" name="transaction_know_contact_person2" value="2">No</td>
+				</tr>
+				<tr>
+					<td colspan="20">Specify relationship with beneficiary: <u><label id="transaction_relation_contact_person" name="transaction_relation_contact_person"></label></u></td>
+				</tr>
+				<tr>
+					<td colspan="20"><u><b>Funds:</b></u></td>
+					<tr>
+						<tr>
+							<td colspan="20">I declare that the amount of AWG <u><label id="transaction_amount_awg" name="transaction_amount_awg"></label></u>. and USD <u><label id="transaction_amount_usd" name="transaction_amount_usd"></u>$</label> </td>
+						</tr>
+						<tr>
+							<td colspan="20">represents funds obtained by me from the following source(s): <u><label id="sof_description" name="sof_description"></label></u></td>
+							
+						</tr>
+						<tr>
+							<td colspan="20">Specify currency denomination (s): <u><label id="transaction_currency" name="transaction_currency"></label></u></td>
+						</tr>
+						<tr>
+							
+							<td><u><b>Aruban Florin</b></u></td>
+							<td><label><center>AWG: </center></label></td>
+							<td colspan="2"><u><label id="sof_awg100" name="sof_awg100"></label></u>x100</td>
+							<td colspan="2"><u><label id="sof_awg50" name="sof_awg50"></label></u>x50</td>
+							<td colspan="1"><u><label id="sof_awg25" name="sof_awg25"></label></u>x25</td>
+							<td colspan="6"><u><label id="sof_awg10" name="sof_awg10"></label></u>x10</td>
+							
+						</tr>
+						<tr>
+							
+							<td><u><b>US Dollar</b></u></td>
+							<td><label><center>USD: </center></label></td>
+							<td colspan="2"><u><label id="sof_usd100" name="sof_usd100"></label></u>x100</td>
+							<td colspan="2"><u><label id="sof_usd50" name="sof_usd50"></label></u>x50</td>
+							<td colspan="1"><u><label id="sof_usd20" name="sof_usd20"></label></u>x20</td>
+							<td colspan="1"><u><label id="sof_usd10" name="sof_usd10"></label></u>x10</td>
+							<td colspan="3"><u><label id="sof_usd5" name="sof_usd5"></label></u>x5</td>
+							<td colspan="3"><u><label id="sof_usd1" name="sof_usd1"></label></u>x1</td>
+							
+						</tr>
+						<tr>
+							<td colspan="20">Reason for sending funds: <u><label id="transaction_reason" name="transaction_reason"></label></u></td>
+							<tr>
+								<td colspan="20"><small>I certify that the information on this form is true, complete and correct to the best of my knowledge and belief</small></td>
+							</tr>
+						</tr>
+						<tr>
+							<td colspan="4">Signature Customer</td>
+							<td colspan="16">Date: (DD/MM/YY)</td>
+						</tr>
+						
+						
+					</tr>
+				</tr>
+			</tr>
+		</table>
+		
+		<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="js/caribedev.js"></script>
+		<script type="text/javascript">
+			function getParam(key) {
+				// Find the key and everything up to the ampersand delimiter
+				var value = RegExp("" + key + "[^&]+").exec(window.location.search);
+				
+				// Return the unescaped value minus everything starting from the equals sign or an empty string
+				return unescape(!!value ? value.toString().replace(/^[^=]+./, "") : "");
+			}
+			
+			
+			$(function () {
+				caribedev_view_source_fund('',getParam('transaction_uuid'),'');
+				caribedev_view_transaction('',getParam('transaction_uuid'),'');
+				caribedev_view_customer_origin('',getParam('customer_uuid'),'');
+				caribedev_view_customer_end('',getParam('customer_uuid_end'),'');
+			});
+			
+			function caribedev_view_customer_origin(channel, customer_uuid, user) {
+				
+				$method = 'GET';
+				
+				$url = caribedevelopers_server + "/customer/" + customer_uuid;
+				$.getJSON($url, function (data) {
+					
+					if (data.code == 'OK') {
+						caribedev_view_customer_origin_ok(data);
+						} else {
+						
+						caribedev_view_customer_origin_error(data);
+					}
+				});
+			}
+			
+			function caribedev_view_customer_origin_ok(data) {
+				
+				if (data.customer.length > 0) {
+					
+					$('#customer_first_name').text(data.customer[0].customer_first_name);
+					$('#customer_last_name').text(data.customer[0].customer_last_name);
+					$('#customer_middle_name').text(data.customer[0].customer_middle_name);
+					$('#customer_date_birth').text(data.customer[0].customer_date_birth);
+					$('#customer_place_birth').text(data.customer[0].customer_place_birth);
+					$('#customer_nacionality').text(data.customer[0].customer_nacionality);
+					$('#customer_phone').text(data.customer[0].customer_phone);
+					$('#customer_mobile').text(data.customer[0].customer_mobile);
+					$('#customer_resident').text((data.customer[0].customer_resident ? 'Resident' : 'Non resident'));
+					$('#customer_address_1').text(data.customer[0].customer_address_1);
+					$('#customer_address_2').text(data.customer[0].customer_address_2);
+					$('#country_id').text(data.customer[0].country_id);
+					
+					
+					// Rule: No resident
+					if (!data.customer[0].customer_resident) {
+						$('#customer_length_stay').text(data.customer[0].customer_length_stay);
+					}
+					else {
+						$('#customer_length_stay').text('N/A');
+					}
+					$('#customer_reason_visit').text(data.customer[0].customer_reason_visit);
+					$('#customer_cdd').text(data.customer[0].customer_cdd);
+					$('#customer_sof').text(data.customer[0].customer_sof)
+					
+					
+				}
+			}
+			function caribedev_view_customer_origin_error() {
+				alert('Sorry, here was an error listing the item');
+				
+			}
+			
+			
+			function caribedev_view_customer_end(channel, customer_uuid, user) {
+				
+				$method = 'GET';
+				
+				$url = caribedevelopers_server + "/customer/" + customer_uuid;
+				$.getJSON($url, function (data) {
+					
+					if (data.code == 'OK') {
+						caribedev_view_customer_end_ok(data);
+						} else {
+						
+						caribedev_view_customer_end_error(data);
+					}
+				});
+			}
+			
+			function caribedev_view_customer_end_ok(data) {
+				
+				if (data.customer.length > 0) {
+					
+					$('#customer_first_name_end').text(data.customer[0].customer_first_name);
+					$('#customer_last_name_end').text(data.customer[0].customer_last_name);
+					$('#customer_middle_name_end').text(data.customer[0].customer_middle_name);
+					$('#customer_date_birth_end').text(data.customer[0].customer_date_birth);
+					$('#customer_place_birth_end').text(data.customer[0].customer_place_birth);
+					$('#customer_nacionality_end').text(data.customer[0].customer_nacionality);
+					$('#customer_phone_end').text(data.customer[0].customer_phone);
+					$('#customer_mobile_end').text(data.customer[0].customer_mobile);
+					$('#customer_resident_end').text((data.customer[0].customer_resident ? 'Resident' : 'Non resident'));
+					$('#customer_address_1_end').text(data.customer[0].customer_address_1);
+					$('#customer_address_2_end').text(data.customer[0].customer_address_2);
+					$('#country_id_end').text(data.customer[0].country_id);
+					$('#customer_city_end').text(data.customer[0].customer_city);
+					
+					
+					
+					// Rule: No resident
+					if (!data.customer[0].customer_resident) {
+						$('#customer_length_stay').text(data.customer[0].customer_length_stay);
+					}
+					else {
+						$('#customer_length_stay').text('N/A');
+					}
+					$('#customer_reason_visit').text(data.customer[0].customer_reason_visit);
+					$('#customer_cdd').text(data.customer[0].customer_cdd);
+					$('#customer_sof').text(data.customer[0].customer_sof)
+					
+					
+				}			
+			}
+			function caribedev_view_customer_end_error() {
+				alert('Sorry, here was an error listing the item');
+				
+			}
+			
+			function caribedev_view_transaction(channel,transaction_uuid,user){
+				$method = 'GET';
+				//$url = caribedevelopers_server + "/transaction/" + customer_uuid;
+				$url = caribedevelopers_server + "/transaction/" + '2ff19cd2-a7e3-43e2-947e-31bd2ffe6012/2ff19cd2-a7e3-43e2-947e-31bd2ffe6012';
+				$.getJSON($url, function(data) {
+					
+					if (data.code == 'OK')
+					{
+						caribedev_view_transaction_ok(data);
+						}else{
+						caribedev_view_transaction_error(data);
+					}
+				});
+			}
+			
+			function caribedev_view_transaction_ok (data){
+				if(data.transaction.length>0){
+					$('#transaction_amount').text(data.transaction[0].transaction_amount);
+					$('#transaction_currency').text(data.transaction[0].transaction_currency);
+					$('#transaction_relation_contact_person').text(data.transaction[0].transaction_relation_contact_person);
+					$('#transaction_know_contact_person').text(data.transaction[0].transaction_know_contact_person);
+					$('#transaction_reason').text(data.transaction[0].transaction_reason);
+					$('#transaction_branch_id').text(data.transaction[0].transaction_branch_id);
+					$('#transaction_employee').text(data.transaction[0].transaction_employee);
+					$('#transaction_type').text(data.transaction[0].transaction_type);
+					$('#transaction_mtcn_number').text(data.transaction[0].transaction_mtcn_number);
+					$('#transaction_reason_refund').text(data.transaction[0].transaction_reason_refund);
+					$('#transaction_reported_mot').text(data.transaction[0].transaction_reported_mot)
+				}				
+			}
+			function caribedev_view_transaction_error() {
+				alert('Sorry, here was an error listing the item');
+			}
+			
+			function caribedev_view_source_fund(channel,transaction_uuid,user){
+				$method = 'GET';
+				//$url = caribedevelopers_server + "/source_fund/" + customer_uuid;
+				$url = caribedevelopers_server + "/source_fund/" + '6e813b02-7ae1-4066-baff-f4ace960bd60';
+				$.getJSON($url, function(data) {
+					
+					if (data.code == 'OK')
+					{
+						caribedev_view_source_fund_ok(data);
+						}else{
+						caribedev_view_source_fund_error(data);
+					}
+				});
+			}
+			
+			function caribedev_view_source_fund_ok (data){
+				if(data.source_fund.length>0){
+					$('#sof_description').text(data.source_fund[0].sof_description);
+					$('#sof_department').text(data.source_fund[0].sof_department);
+					$('#sof_occupation').text(data.source_fund[0].sof_occupation);
+					$('#sof_company_name').text(data.source_fund[0].sof_company_name);
+					$('#sof_employer_name').text(data.source_fund[0].sof_employer_name);
+					$('#sof_employer_occupation').text(data.source_fund[0].sof_employer_occupation);
+					$('#sof_awg10').text(data.source_fund[0].sof_awg10);
+					$('#sof_awg25').text(data.source_fund[0].sof_awg25);
+					$('#sof_awg50').text(data.source_fund[0].sof_awg50);
+					$('#sof_awg100').text(data.source_fund[0].sof_awg100);
+					$('#sof_usd1').text(data.source_fund[0].sof_usd1);
+					$('#sof_usd5').text(data.source_fund[0].sof_usd5);
+					$('#sof_usd10').text(data.source_fund[0].sof_usd10);
+					$('#sof_usd20').text(data.source_fund[0].sof_usd20);
+					$('#sof_usd50').text(data.source_fund[0].sof_usd50);
+					$('#sof_usd100').text(data.source_fund[0].sof_usd100);
+					$('#transaction_amount_awg').text(calculate_awg_amount(data));
+					$('#transaction_amount_usd').text(calculate_usd_amount(data));
+				}
+				
+			}
+			function caribedev_view_source_fund_error() {
+				alert('Sorry, here was an error listing the item');
+			}
+			
+			function calculate_usd_amount(data) {
+				var amount = 0;
+				amount = data.source_fund[0].sof_usd1 + (data.source_fund[0].sof_usd5*5) + (data.source_fund[0].sof_usd10*10) + (data.source_fund[0].sof_usd20+20) + (data.source_fund[0].sof_usd50*50) + (data.source_fund[0].sof_usd100*100);
+				return amount;
+			}
+			function calculate_awg_amount(data) {
+				var amount = 0;
+				amount = (data.source_fund[0].sof_awg10*10) + (data.source_fund[0].sof_awg25*25) + (data.source_fund[0].sof_awg50*50) + (data.source_fund[0].sof_awg100*100);
+				return amount;
+			}
+		</script>
+	</body>
+</html>

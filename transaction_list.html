@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Western Union</title>
+	
+    <!-- Vendor CSS -->
+	
+    <link href="vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+	
+    <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+    <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+    <link href="vendors/bower_components/nouislider/distribute/jquery.nouislider.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+    <link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
+    <link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+	
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+    <link href="css/own.css" rel="stylesheet">
+</head>
+
+<body>
+	
+	<section id="main">	
+		<section id="content">
+			<div class="container">
+				<div class="block-header">
+					<h2>TRANSACTION</h2>
+				</div>
+				<!-- START CONTENT -->
+				
+				<div class="card bs-item z-depth-1 col-md-12"> <!-- start card -->
+					<table id="tbl_transaction" class="table table-striped table-vmiddle">
+						<thead>
+							<tr>
+								<th data-column-id="customer_first_name_origin">SENDER NAME</th>
+								<th data-column-id="customer_first_name_end">RECEIVER NAME</th>
+								<th data-column-id="transaction_date_create">DATE</th>								
+								<th data-column-id="transaction_amount">AMOUNT</th>		
+								<th data-column-id="transaction_currency">CURRENCY</th>
+								<th data-column-id="transaction_reason">REASON</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</div> <!-- end card -->
+			</div>
+		</div>
+		
+		
+		<!-- END CONTENT -->
+		
+	</section>
+</section>
+
+<footer id="footer">
+	Copyright &copy; 2016 caribeDevelopers.com
+</footer>
+
+<!-- Page Loader -->
+<div class="page-loader">
+	<div class="preloader pls-blue">
+		<svg class="pl-circular" viewBox="25 25 50 50">
+			<circle class="plc-path" cx="50" cy="50" r="20" />
+		</svg>
+		
+		<p>Please wait...</p>
+	</div>
+</div>
+
+<!-- Older IE warning message -->
+<!--[if lt IE 9]>
+	<div class="ie-warning">
+	<h1 class="c-white">Warning!!</h1>
+	<p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+	<div class="iew-container">
+	<ul class="iew-download">
+	<li>
+	<a href="http://www.google.com/chrome/">
+	<img src="img/browsers/chrome.png" alt="">
+	<div>Chrome</div>
+	</a>
+	</li>
+	<li>
+	<a href="https://www.mozilla.org/en-US/firefox/new/">
+	<img src="img/browsers/firefox.png" alt="">
+	<div>Firefox</div>
+	</a>
+	</li>
+	<li>
+	<a href="http://www.opera.com">
+	<img src="img/browsers/opera.png" alt="">
+	<div>Opera</div>
+	</a>
+	</li>
+	<li>
+	<a href="https://www.apple.com/safari/">
+	<img src="img/browsers/safari.png" alt="">
+	<div>Safari</div>
+	</a>
+	</li>
+	<li>
+	<a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+	<img src="img/browsers/ie.png" alt="">
+	<div>IE (New)</div>
+	</a>
+	</li>
+	</ul>
+	</div>
+	<p>Sorry for the inconvenience!</p>
+	</div>
+<![endif]-->
+
+
+<!-- Javascript Libraries -->
+<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+<script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+<script src="vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+<!-- Script Agregado por Luis Bello-->
+<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+<script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+<script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="http://server-bamboodb.rhcloud.com/libs/bamboo.js"></script>	
+<script src="vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+<script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+<script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+<script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+
+<!-- Placeholder for IE9 -->
+<!--[if IE 9 ]>
+	<script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+<![endif]-->
+<script src="js/caribedev.js"></script>
+<script src="js/functions.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		caribedev_list_transaction ();
+		
+		
+		$("#tbl_transaction").bootgrid({
+			css: {
+				icon: 'zmdi icon',
+				iconColumns: 'zmdi-view-module',
+				iconDown: 'zmdi-expand-more',
+				iconRefresh: 'zmdi-refresh',
+				iconUp: 'zmdi-expand-less'
+			},
+		});
+				
+		//Command Buttons
+		$("#data-table-command").bootgrid({
+			css: {
+				icon: 'zmdi icon',
+				iconColumns: 'zmdi-view-module',
+				iconDown: 'zmdi-expand-more',
+				iconRefresh: 'zmdi-refresh',
+				iconUp: 'zmdi-expand-less'
+			},
+			formatters: {
+				"commands": function(column, row) {
+					return "<button type=\"button\" class=\"btn btn-icon command-edit waves-effect waves-circle\" data-row-id=\"" + row.id + "\"><span class=\"zmdi zmdi-edit\"></span></button> " + 
+					"<button type=\"button\" class=\"btn btn-icon command-delete waves-effect waves-circle\" data-row-id=\"" + row.id + "\"><span class=\"zmdi zmdi-delete\"></span></button>";
+				}
+			}
+		});
+	});
+	function caribedev_list_transaction(channel, user) {
+		
+		$method = 'GET';
+		
+		//$url = caribedevelopers_server + "/transaction/";
+		url = caribedevelopers_server + "/transaction/list/names";
+		$.getJSON(url, function (data) {
+			
+			if (data.code == 'OK') {
+				caribedev_list_transaction_ok(data);
+				} else {
+				
+				caribedev_list_transaction_error(data);
+			}
+		});
+		
+		
+	}
+	
+	function caribedev_list_transaction_error(data, element_type) {
+		//console.log($(data).text());
+		//… do something
+	}
+	
+	function caribedev_list_transaction_ok(data, element_type) {
+		//console.log($(data).text());
+		//… do something
+		
+		
+		
+		
+		$.each(data.transaction_uuid, function (i, item) {
+			//var _date = new Date(data.transaction[i].transaction_date_create);
+			//var d = _date.getDate();
+			//var m = _date.getMonth();
+			//var y = _date.getFullYear();
+			
+			//var n_date = y + '-' + ('0' + (m + 1)).slice(-2) + '-' + d;
+			//var shide_info = '';
+			//shide_info += '<input type="hidden" id="transaction_uuid" name="transaction_name" value="' + item.transaction_uuid + '" />';
+			$("#tbl_transaction").bootgrid('append',
+			[{
+				customer_first_name_origin: item.customer_first_name_origin + ' ' + item.customer_last_name_origin,
+				customer_first_name_end: item.customer_first_name_end + ' ' + item.customer_last_name_end,
+				transaction_date_create: item.transaction_date_create,			
+				transaction_amount: item.transaction_amount,
+				transaction_currency: item.transaction_currency,
+				transaction_reason: item.transaction_reason
+				
+				
+			}]
+			);
+		}
+		);
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+﻿<!-- <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="customer_list.html.cs" Inherits="wus_site.customer_list" %> -->
+
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Western Union</title>
+	
+	<!-- Vendor CSS -->
+	<link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+	<link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+	
+	<!-- CSS -->
+	<link href="css/app.min.1.css" rel="stylesheet">
+	<link href="css/app.min.2.css" rel="stylesheet">
+	<link href="css/caribedev.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--#include file="header.html"-->
+	<section id="main">
+		<section id="content">
+			<div class="container">
+				<div class="block-header">
+					<h2>Customer End List</h2>
+				</div>
+				<!-- START CONTENT -->
+				<input type="hidden" id="customer_end_relation_list" name="customer_end_relation_list" value="369d39c1-4c3f-4bd0-9fcc-80d7fa53fdec, fddd8dbc-b6ad-4770-8e64-e4a30bdabd06, fddd8dbc-b6ad-4770-8e64-e4a30bdabd06, fddd8dbc-b6ad-4770-8e64-e4a30bdabd06" />
+				<button class="btn btn-float btn-info bgm-amber m-btn" onclick="location.href = 'customer_create.html'"><i class="zmdi zmdi-plus"></i></button>
+				<div class="card bs-item z-depth-1">
+					<div class="card-header header-caribe">
+						<h2></h2>
+					</div>
+					<table id="tbl_customer" class="table table-striped table-vmiddle">
+						<thead>
+							<tr>
+								<th data-column-id="costumer_wu_card_number">Card Number</th>
+								<th data-column-id="customer_name">Name</th>
+								<th data-column-id="customer_nacionality">Nationality</th>
+								<th data-column-id="customer_resident">Resident</th>
+								<th data-column-id="customer_since">Customer since</th>
+								<th data-column-id="commands" data-formatter="commands" data-sortable="false">Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			
+			<!-- END CONTENT -->
+			
+		</section>
+	</section>
+	
+	<footer id="footer">
+		Copyright &copy; 2016 Madworksglobal.com
+	</footer>
+	
+	<!-- Page Loader -->
+	<div class="page-loader">
+		<div class="preloader pls-blue">
+			<svg class="pl-circular" viewBox="25 25 50 50">
+				<circle class="plc-path" cx="50" cy="50" r="20" />
+			</svg>
+			
+			<p>Please wait...</p>
+		</div>
+	</div>
+	
+	
+	<!-- Javascript Libraries -->
+	<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+	<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+	<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+	<script src="vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+	
+	<!-- Placeholder for IE9 -->
+	<!--[if IE 9 ]>
+		<script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+	<![endif]-->
+	
+	<script src="js/caribedev.js"></script>
+	<script src="js/functions.js"></script>
+	
+	<script type="text/javascript">
+		function getParam(key) {
+	        var value = RegExp("" + key + "[^&]+").exec(window.location.search);
+	        return unescape(!!value ? value.toString().replace(/^[^=]+./, "") : "");
+		}
+		
+		
+		$(function () {
+			caribedev_list_customer('');
+		});
+		
+		function caribedev_list_customer(channel) {
+			
+			$method = 'GET';
+			
+			$url = caribedevelopers_server + "/customer/";
+			
+			$.getJSON($url, function (data) {
+				
+				if (data.code == 'OK') {
+					caribedev_list_customer_ok(data);
+					
+				}
+			});
+			
+		}
+		
+		
+		function caribedev_list_customer_ok(data) {
+			
+			$('#tbl_customer').bootgrid('clear');
+			
+			$.each(data.customer, function (i, item) {
+				
+				if (item.customer_uuid != getParam('customer_uuid'))
+				{
+					var shide_info = '';
+					shide_info += '<input type="hidden" id="customer_uuid" name="customer_uuid" value="' + item.customer_uuid + '" />';
+					$("#tbl_customer").bootgrid('append',
+					[{
+						costumer_wu_card_number: "<a href='customer_view.html?customer_uuid=" + item.customer_uuid + "'>" + item.customer_wu_card_number + "</a>" + shide_info,
+						customer_name: item.customer_first_name + ' ' + item.customer_last_name,
+						customer_nacionality: item.customer_nacionality,
+						customer_resident: (item.customer_resident ? "YES" : "NO"),
+						customer_since: "2012",
+						commands: "<button type=\"button\" data-row-id=\"" + item.customer_uuid + "\" id=\"delete_customer\" name=\"delete_customer\" class=\"btn btn-icon command-delete waves-effect waves-circle\"\"><span class=\"zmdi zmdi-delete\"></span></button>"
+						
+					}]
+					).on("loaded.rs.jquery.bootgrid", function () {
+						/* Action to delete */
+						$("#tbl_customer").find(".command-delete").on("click", function (e) {
+							var domElement = $(e.currentTarget);
+							swal({
+								title: "Are you sure?",
+								text: "You will not be able to recover this customer!",
+								type: "warning",
+								showCancelButton: true,
+								confirmButtonColor: "#DD6B55",
+								confirmButtonText: "Yes, delete it!",
+								closeOnConfirm: false
+								}, function () {
+								$method = 'DELETE';
+								$token = '';
+								$url = caribedevelopers_server + "/customer/" + domElement.attr('data-row-id');
+								$.ajax({
+									type: $method,
+									url: $url,
+									contentType: 'application/x-www-form-urlencoded'
+									//,
+									//headers: {
+									//    "token": $token
+									//}
+									}).done(function (data) {
+									if ($(data).find("code").text() != '0') //DO IF RESPONSE ERROR
+									{
+										swal("The customer could not be deleted!", "Please, try again later.", "error");
+										
+									} else //DO IF RESPONSE OK
+									{
+										swal({
+											title: "Customer deleted!",
+											type: "success",
+											showCancelButton: false,
+											confirmButtonColor: "#DD6B55",
+											confirmButtonText: "Close",
+											closeOnConfirm: false
+											}, function () {
+											location.reload();
+										});
+									}
+								});
+								
+							});
+						});
+					});
+				}
+			}
+			);
+		}
+		
+		function caribedev_list_customer_error() {
+			alert('Sorry, here was an error listing the item');
+		}
+		
+		$(document).ready(function(){
+			caribedev_search_custormer;
+		})
+		
+		function caribedev_search_custormer(customer_element_uuid, customer_end_no_list) {
+			
+			var arreglo = customer_end_no_list.split(',');
+			var encontrado = false;
+			var i - 0;
+			while (i < arreglo.length && !encontrado)
+			{
+				if (arreglo[i] == customer_element_uuid)
+				{
+					encontrado = true;
+				}
+				else
+				i++;
+			}
+			
+		}
+		
+		function caribedev_search_custormer() {
+			alert('Sorry, here was an error listing the item');
+		}
+		
+		function get_Full_Year(param_date) {
+			var d = new Date(param_date);
+			return d.getFullYear();
+		}
+		
+		
+	</script>
+</body>
+</html>

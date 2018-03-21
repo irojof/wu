@@ -1,0 +1,413 @@
+﻿<!-- <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="transaction_profile_edit.html.cs" Inherits="wus_site.transaction_profile_edit" %> -->
+
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Western Union</title>
+    
+	<!-- Vendor CSS -->
+	<link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+	<link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+	<link href="vendors/bower_components/nouislider/distribute/jquery.nouislider.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+	<link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
+	<link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+	<!-- CSS -->
+	<link href="css/app.min.1.css" rel="stylesheet">
+	<link href="css/app.min.2.css" rel="stylesheet">
+	<link href="css/own.css" rel="stylesheet">
+    <link href="css/caribedev.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	<!--#include file="header.html"-->
+	<section id="main">
+		<section id="content">
+			<div class="container">
+				<div class="block-header">
+					<h2>Transaction profile</h2>
+				</div>
+				<!-- START CONTENT -->
+				<form id="frm_transaction" name="frm_transaction">
+					<div class="card bs-item z-depth-1">
+					<div class="card-header ch-alt">
+						<h2>USER</h2>
+					</div>
+					<div class="card-body card-padding">
+						<div class="row">
+							<div class="col-md-12">
+									<div class="row">
+										<div class=" col-md-6">
+											<div class="input-group">
+												<span class="input-group-addon"><i class="zmdi zmdi-accounts-list"></i></span>
+												<div class="fg-line">
+													<input type="text" class="form-control date-picker input-lg" id="transaction_profile_idcard" name="transaction_profile_idcard" placeholder="ID Card" disabled>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="input-group ">
+												<span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
+												<div class="fg-line">
+													<input type="text" class="form-control input-lg" id="transaction_profile_name" name="transaction_profile_name" placeholder="Name" disabled>
+												</div>
+											</div>											
+											</div>
+										</div>
+							</div>
+						</div>
+						<br/>
+					</div>
+				</div>
+					
+					<div class="card bs-item z-depth-1">
+						<div class="card-header ch-alt">
+							<h2>Transaction Profile</h2>
+						</div>
+						
+						<div class="card-body card-padding">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="transaction_profile_full_name_ce" name="transaction_profile_full_name_ce" placeholder="Full Name">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-globe-alt"></i></span>
+													<div class="fg-line">
+														<div class="select">
+															<select class="form-control input-lg" id="transaction_profile_country_ce" name="transaction_profile_country_ce">
+																<option>Country</option>
+
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-accounts"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="transaction_profile_relationship_to_ce" name="transaction_profile_relationship_to_ce" placeholder="Relationship">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-info"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="transaction_profile_reason_ce" name="transaction_profile_reason_ce" placeholder="Reason">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-money zmdi-hc-fw"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="transaction_profile_expected_transaction" name="transaction_profile_expected_transaction" placeholder="Expected Transaction">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-money zmdi-hc-fw"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="transaction_profile_maximun_ammount" name="transaction_profile_maximun_ammount" placeholder="Maximun Ammount">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-info"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="transaction_profile_reason_change" name="transaction_profile_reason_change" placeholder="Reason Change">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12 notifications row">
+							<div class="pull-right">
+								<button id="btn_transaction_return" name="btn_transaction_return" class="btn btn-default btn-lg">Return</button> &nbsp; &nbsp;
+								<button id="btn_transaction_submit" name="btn_transaction_submit" data-type="success" type="submit" class="btn bgm-amber btn-lg" >Save</button>
+							</div>
+						</div>
+					</div>
+					
+				</form>
+				<!-- END CONTENT -->
+			</div>
+		</section>
+	</section>
+	
+	<footer id="footer">
+		Copyright &copy; 2016 Madworksglobal.com
+	</footer>
+	
+	<!-- Page Loader -->
+	<div class="page-loader">
+		<div class="preloader pls-blue">
+			<svg class="pl-circular" viewBox="25 25 50 50">
+				<circle class="plc-path" cx="50" cy="50" r="20" />
+			</svg>
+			
+			<p>Please wait...</p>
+		</div>
+	</div>
+	
+	<!-- Javascript Libraries -->
+	<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+	<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+	<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+	<script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+	<script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+	<script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+	
+    <script src="js/caribedev.js"></script>
+    <script src="js/functions.js"></script>	
+
+
+    <script type="text/javascript">
+
+        var x_relationshipt = ['Father', 'Mother', 'Son', 'Daughter', 'Brother', 'Sister', 'Grandson', 'Granddaughter', 'Grandfather', 'Grandmother', 'Nephew', 'Niece', 'Uncle', 'Aunt', 'Friend', 'Wife', 'Husband'];
+        var x_reason = ["Help", "Maintenance", "Services pay"];
+
+        function getParam(key) {
+            // Find the key and everything up to the ampersand delimiter
+            var value = RegExp("" + key + "[^&]+").exec(window.location.search);
+
+            // Return the unescaped value minus everything starting from the equals sign or an empty string
+            return unescape(!!value ? value.toString().replace(/^[^=]+./, "") : "");
+        }
+
+
+        $(document).ready(
+		function () {
+		    caribedev_view_customer('', getParam('customer_uuid'), '');
+		    caribedev_view_transaction_profile('', getParam('transaction_profile_uuid'), '');
+
+		}
+	    );
+
+        function caribedev_view_transaction_profile(channel, transaction_profile_uuid, user) {
+            $method = 'GET';
+
+            $url = caribedevelopers_server + "/transaction_profile/" + transaction_profile_uuid + '/' + transaction_profile_uuid;
+
+            $.getJSON($url, function (data) {
+
+                if (data.code == 'OK') {
+                    caribedev_view_transaction_profile_ok(data);
+                } else {
+
+                    caribedev_view_transaction_profile_error(data);
+                }
+            });
+
+        }
+
+        function caribedev_view_transaction_profile_ok(data) {
+            $('#transaction_profile_full_name_ce').val(data.transaction_profile[0].transaction_profile_full_name_ce);
+            $('#transaction_profile_country_ce').val(data.transaction_profile[0].transaction_profile_country_ce);
+            $('#transaction_profile_relationship_to_ce').val(data.transaction_profile[0].transaction_profile_relationship_to_ce);
+            $('#transaction_profile_reason_ce').val(data.transaction_profile[0].transaction_profile_reason_ce);
+            $('#transaction_profile_expected_transaction').val(data.transaction_profile[0].transaction_profile_expected_transaction);
+            $('#transaction_profile_maximun_ammount').val(data.transaction_profile[0].transaction_profile_maximun_ammount);
+            $('#transaction_profile_reason_change').val(data.transaction_profile[0].transaction_profile_reason_change);
+        }
+
+        function caribedev_view_transaction_profile_error(data) {
+            console.log(data);
+            alert('Sorry, here was an error listing profile!');
+        }
+
+        function caribedev_view_customer(channel, customer_uuid, user) {
+            $method = 'GET';
+
+            $url = caribedevelopers_server + "/customer/" + customer_uuid;
+
+            $.getJSON($url, function (data) {
+
+                if (data.code == 'OK') {
+                    caribedev_view_customer_ok(data);
+                } else {
+
+                    caribedev_view_customer_error(data);
+                }
+            });
+
+        }
+
+
+        function caribedev_view_customer_ok(data) {
+
+            $('#transaction_profile_idcard').val(data.customer[0].customer_id_card);
+            $('#transaction_profile_name').val(data.customer[0].customer_first_name + ' ' + data.customer[0].customer_last_name);
+
+        }
+
+        function caribedev_view_customer_error(data) {
+            console.log(data);
+            alert('Sorry, here was an error listing costumer!');
+        }
+
+       
+
+        function caribedev_update_transaction_profile(channel, transaction_profile_uuid, user) {
+
+            method = "PUT";
+            url = caribedevelopers_server + "/transaction_profile/" + transaction_profile_uuid;
+
+            $.ajax({
+                type: method,
+                url: url,
+                contentType: 'application/x-www-form-urlencoded',
+                data: $('#frm_transaction_profile').serialize(),
+                dataType: 'text'
+                //,
+                //processData: false,
+                //headers: {
+                //    'channel': channel
+                //}
+
+            }).done(function (data) {
+
+                if (data.code != 'OK') {
+
+                    caribedev_update_transaction_profile_error(data);
+
+                }
+                else {
+                    caribedev_update_transaction_profile_ok(data);
+                }
+
+            });
+        }
+
+        function caribedev_update_transaction_profile_ok(data) {
+            console.log(data);
+            alert('Your Transaction Profile was updated successfully!');
+        }
+        function caribedev_update_transaction_profile_error(data) {
+            console.log(data);
+            alert('Sorry, here was an error listing the item');
+        }
+
+		
+		function caribedev_list_country(data) {
+
+		$method = 'GET';
+
+		$url = caribedevelopers_server + "/country"
+
+
+		$.getJSON($url, function (data) {
+
+			if (data.code == 'OK') {
+				caribedev_list_country_ok(data);
+			}
+		});
+
+	}
+		
+		
+		function caribedev_list_country_ok(data) 
+		{
+
+
+		
+			if (data.country.length > 0)
+				{
+
+					for (i = 0; i < data.country.length; i++)
+					 {
+
+						$("#transaction_profile_country_ce").append('<option value="' + data.country[i].country_id + '">' + data.country[i].country_description + '</option>');
+
+					}
+
+					
+				}
+
+		}	
+
+			$(document).ready(function() {
+			caribedev_list_country();
+		});
+
+				
+				
+
+        $('#frm_transaction_profile').submit(function () {
+            caribedev_update_transaction_profile('', getParam('transaction_profile_uuid'), '');
+        });
+
+        $('#btn_transaction_return').click(function () {
+
+            window.location.href = 'transaction_profile_view.html?customer_uuid=' + getParam('#customer_uuid');
+        });
+
+	</script>
+
+	
+</body>
+</html>

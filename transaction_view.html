@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Western Union</title>
+	
+	<!-- Vendor CSS -->
+	<link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+	<link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+	<link href="vendors/bower_components/nouislider/distribute/jquery.nouislider.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+	<link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
+	<link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+	<!-- CSS -->
+	<link href="css/app.min.1.css" rel="stylesheet">
+	<link href="css/app.min.2.css" rel="stylesheet">
+	<link href="css/own.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	<!--jsp:include page="./header.jsp"/-->
+	<section id="main">
+		<section id="content">
+			<div class="container">
+				<div class="block-header">
+					<h2>Transaction detail</h2>
+				</div>
+				<!-- START CONTENT -->
+				
+					
+					<div class="card">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-18">
+								<div class="col-md-5 col-sm-5 col-xs-5">
+									<div class="lcb-alt toggled">
+										<img class="lcb-user" src="img/profile-pics/1.png" alt="">
+										<div class="fg-line">
+											<input disabled type="text"  required class="form-control input-lg" id="transaction_from" name="transaction_from" placeholder="Jheremy Tineo" disabled>	
+											<input disabled hidden name="customer_uuid_origin" id="customer_uuid_origin">	
+											<input disabled hidden name="customer_uuid_end" id="customer_uuid_end">
+											<input disabled hidden type="text" id="transaction_type" name="transaction_type">
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-md-1 col-sm-1 col-xs-1">
+									<br>
+									<br>
+									<br>
+									<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a class="btn bgm-amber btn-float disabled"><i class="zmdi zmdi-arrow-forward"></i></a>
+								</div>
+								<div class="col-md-5 col-sm-5 col-xs-5">
+									<div class="lcb-alt toggled">
+										<img class="lcb-user" src="img/profile-pics/2.png" alt="">
+										<div class="fg-line">
+											<input disabled type="text"  required class="form-control input-lg" id="transaction_to" name="transaction_to" placeholder="Yosnel" disabled>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<form id="frm_sof" name="frm_sof" method="POST">
+				<input disabled hidden name="transaction_uuid" class="frm_sof" id="transaction_uuid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card bs-item z-depth-1">
+								<div class="card-body card-padding">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="panel-group" data-collapse-color="amber" id="accordionAmber" role="tablist" aria-multiselectable="true">
+												<div class="panel panel-collapse">
+													<div class="panel-heading" role="tab">
+														<h4 class="panel-title">
+															<a class="collapsed" data-toggle="collapse" data-parent="#accordionAmber" href="#accordionAmber-one" aria-expanded="false">Source of funds
+															</a>
+														</h4>
+													</div>
+													<div id="accordionAmber-one" class="collapse" role="tabpanel">
+														<div class="panel-body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class=" col-md-12">
+																			<br>
+																			<div class="input-group ">
+																				<span class="input-group-addon"><i class="zmdi zmdi-edit"></i></span>
+																				<div class="fg-line">
+																					<input disabled required type="text" class="form-control input-lg" id="sof_description" name="sof_description" placeholder="Description">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class=" col-md-12">
+																			<br>
+																			<div class="input-group ">
+																				<span class="input-group-addon"><i class="zmdi zmdi-city"></i></span>
+																				<div class="fg-line">
+																					<input disabled required type="text" class="form-control input-lg" id="sof_department" name="sof_department" placeholder="Department">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class=" col-md-12">
+																			<br>
+																			<div class="input-group ">
+																				<span class="input-group-addon"><i class="zmdi zmdi-wrench"></i></span>
+																				<div class="fg-line">
+																					<input disabled required type="text" class="form-control input-lg" id="sof_occupation" name="sof_occupation" placeholder="Occupation">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class=" col-md-12">
+																			<br>
+																			<div class="input-group ">
+																				<span class="input-group-addon"><i class="zmdi zmdi-local-store"></i></span>
+																				<div class="fg-line">
+																					<input disabled required type="text" class="form-control input-lg" id="sof_company_name" name="sof_company_name" placeholder="Company Name">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class=" col-md-12">
+																			<br>
+																			<div class="input-group ">
+																				<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+																				<div class="fg-line">
+																					<input disabled required type="text" class="form-control input-lg" id="sof_employer_name" name="sof_employer_name" placeholder="Employer Name">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class=" col-md-12">
+																			<br>
+																			<div class="input-group ">
+																				<span class="input-group-addon"><i class="zmdi zmdi-pin-account"></i></span>
+																				<div class="fg-line">
+																					<input disabled required type="text" class="form-control input-lg" id="sof_employer_ocupation" name="sof_employer_ocupation" placeholder="Employer Ocupation">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<br><br>
+															
+															<div class="col-md-12">
+																
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="col-md-2 input-lg">
+																			AWP
+																		</div>
+																	</div>
+																	<div>
+																		<div class="col-md-6">
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_awg10" name="sof_awg10">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_awg10" class="control-label input-lg">x10</label>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_awg25" name="sof_awg25">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_awg25" class="control-label input-lg">x25</label>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="col-md-6">
+																			<div class="row">
+																				<div class="col-sm-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_awg50" name="sof_awg50">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_awg50" class="control-label input-lg">x50</label>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_awg100" name="sof_awg100">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_awg100" class="control-label input-lg">x100</label>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="col-md-2 input-lg">
+																			USD
+																		</div>
+																	</div>
+																	<div>
+																		<div class="col-md-6">
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_usd1" name="sof_usd1">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_usd1" class="control-label input-lg">x1</label>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_usd5" name="sof_usd5">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_usd5" class="control-label input-lg">x5</label>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-sm-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_usd10" name="sof_usd10">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_usd10" class="control-label input-lg">x10</label>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="col-md-6">
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_usd20" name="sof_usd20">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_usd20" class="control-label input-lg">x20</label>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_usd50" name="sof_usd50">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_usd50" class="control-label input-lg">x50</label>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-4">
+																					<div class="fg-line">
+																						<input disabled type="text" class="form-control input-lg" id="sof_usd100" name="sof_usd100">
+																					</div>
+																				</div>
+																				<div class="col-md-1">
+																					<label for="sof_usd100" class="control-label input-lg">x100</label>
+																				</div>
+																				
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<form id="frm_transaction" name="frm_transaction" method="POST">
+				<input disabled hidden name="transaction_uuid" id="transaction_uuid" class="frm_transaction">
+					<div class="card bs-item z-depth-1">
+						<div class="card-header ch-alt">
+							<h2>Transaction</h2>
+						</div>
+						
+						<div class="card-body card-padding">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-money"></i></span>
+													<div class="fg-line">
+														<input disabled type="text"  required class="form-control input-lg" id="transaction_amount" name="transaction_amount" placeholder="Amount">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
+													<div class="fg-line">
+														<!-- <input disabled type="text"  required class="form-control input-lg" id="transaction_currency" name="transaction_currency" placeholder="Currency"> -->
+														<div class="select">
+															<select disabled class="form-control input-lg" id="transaction_currency" name="transaction_currency" placeholder="Currency">
+																<option>Currency</option>
+																<option value="0">$</option>
+																<option value="1">ƒ</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-accounts"></i></span>
+													<div class="fg-line">
+														<!-- <input disabled type="text"  required class="form-control input-lg" id="transaction_relation_contact_person" name="transaction_relation_contact_person" placeholder="transaction_relation_contact_person"> -->
+														<div class="select">
+															<select disabled class="form-control input-lg" id="transaction_relation_contact_person" name="transaction_relation_contact_person">
+																<option>Relation contact person</option>
+																<option value="0">Father</option>
+																<option value="1">Mother</option>
+																<option value="2">Son</option>
+																<option value="3">Daughter</option>
+																<option value="4">Brother</option>
+																<option value="5">Sister</option>
+																<option value="6">Grandson</option>
+																<option value="7">Granddaughter</option>
+																<option value="8">Grandfather</option>
+																<option value="9">Grandmother</option>
+																<option value="10">Nephew</option>
+																<option value="11">Niece</option>
+																<option value="12">Uncle</option>
+																<option value="13">Aunt</option>
+																<option value="14">Friend</option>
+																<option value="15">Wife</option>
+																<option value="16">Husband</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-local-store"></i></span>
+													<div class="fg-line">
+														<div class="select" placeholder="Know contact person">
+															<select disabled class="form-control input-lg" id="transaction_know_contact_person" name="transaction_know_contact_person" placeholder="Know contact person">
+																<option>Know beneficiary?</option>
+																<option value="0">Yes (Know beneficiary)</option>
+																<option value="1">No (Know beneficiary)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-info"></i></span>
+													<div class="fg-line">
+														<input disabled type="text"  required class="form-control input-lg" id="transaction_reason" name="transaction_reason" placeholder="Reason">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
+													<div class="fg-line">
+														<input disabled type="text"  required class="form-control input-lg" id="transaction_branch_id" name="transaction_branch_id" placeholder="Branch ID">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
+													<div class="fg-line">
+														<input disabled type="text"  required class="form-control input-lg" id="transaction_employee" name="transaction_employee" placeholder="Employee">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-accounts-list"></i></span>
+													<div class="fg-line">
+														<input disabled type="text"  required class="form-control input-lg" id="transaction_mtcn_number" name="transaction_mtcn_number" placeholder="MTCN number">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-help"></i></span>
+													<div class="fg-line">
+														<input disabled type="text" class="form-control input-lg" id="transaction_reason_refund" name="transaction_reason_refund" placeholder="Reason refund">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-accounts-list"></i></span>
+													<div class="fg-line">
+														<!-- <input disabled type="text"  required class="form-control input-lg" id="transaction_reported_mot" name="transaction_reported_mot" placeholder="Reported mot"> -->
+														<div class="select">
+															<select disabled class="form-control input-lg" id="transaction_reported_mot" name="transaction_reported_mot">
+																<option>Reported mot?</option>
+																<option value="0">Yes (Reported mot)</option>
+																<option value="1">No (Reported mot)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<form id="frm_unusual_activity" name="frm_unusual_activity" method="POST">
+				<input disabled hidden name="transaction_uuid" id="transaction_uuid" class="frm_unusual_activity">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card bs-item z-depth-1">
+								<div class="card-body card-padding">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="panel-group" data-collapse-color="amber" id="accordionAmbertwo" role="tablist" aria-multiselectable="true">
+												<div class="panel panel-collapse">
+													<div class="panel-heading" role="tab">
+														<h4 class="panel-title">
+															<a class="collapsed" data-toggle="collapse" data-parent="#accordionAmbertwo" href="#accordionAmber-two" aria-expanded="false">Unusual activity
+															</a>
+														</h4>
+													</div>
+													<div id="accordionAmber-two" class="collapse" role="tabpanel">
+														<div class="panel-body">
+															<div class="col-md-12">
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class=" col-md-12">
+																			<div class="input-group ">
+																				<span class="input-group-addon"><i class="zmdi zmdi-edit"></i></span>
+																				<div class="fg-line">
+																					<input disabled required type="text" class="form-control input-lg" id="unusual_activity_description" name="unusual_activity_description" placeholder="Description">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="col-md-12">
+																			<div class="input-group">
+																				<span class="input-group-addon"><i class="zmdi zmdi-alert-triangle"></i></span>
+																				<div class="fg-line">
+																					<!-- <input disabled type="text" required class="form-control input-lg" id="transaction_possible_scam" name="transaction_possible_scam" placeholder="Possible scam"> -->
+																					<div class="select">
+																						<select disabled class="form-control input-lg" id="unusual_activity_posible_scam" name="unusual_activity_posible_scam" placeholder="Know contact person">
+																							<option>Possible scam?</option>
+																							<option value="0">Yes (Possible scam)</option>
+																							<option value="1">No (Possible scam)</option>
+																						</select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				
+					<div class="row">
+						<div class="col-md-12 notifications row">
+							<div class="pull-right">
+								<button id="btn_transaction_cancel" name="btn_transaction_cancel" class="btn btn-default btn-lg" onclick="parent.history.back();">Cancel</button> &nbsp; &nbsp;
+							</div>
+						</div>
+					</div>
+					
+				
+				<!-- END CONTENT -->
+			</div>
+		</section>
+	</section>
+	
+	<footer id="footer">
+		Copyright &copy; 2016 caribeDevelopers.com
+	</footer>
+	
+	<!-- Page Loader -->
+	<div class="page-loader">
+		<div class="preloader pls-blue">
+			<svg class="pl-circular" viewBox="25 25 50 50">
+				<circle class="plc-path" cx="50" cy="50" r="20" />
+			</svg>
+			
+			<p>Please wait...</p>
+		</div>
+	</div>
+	
+	<!-- Javascript Libraries -->
+	<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+	<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+	<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+	<script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+	<script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+	<script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+	<script src="js/caribedev.js"></script>
+	<script src="js/functions.js"></script>
+	
+	<script type="text/javascript">
+		function getParam(key) {
+			// Find the key and everything up to the ampersand delimiter
+			var value = RegExp("" + key + "[^&]+").exec(window.location.search);
+			
+			// Return the unescaped value minus everything starting from the equals sign or an empty string
+			return unescape(!!value ? value.toString().replace(/^[^=]+./, "") : "");
+		}
+		
+		
+		$(function ()
+		{
+			caribedev_view_source_fund('',getParam('transaction_uuid'),'');
+			caribedev_view_transaction('',getParam('transaction_uuid'),'');
+			caribedev_view_unusual_activity('',getParam('transaction_uuid'),'');
+		});
+		
+		function caribedev_view_unusual_activity(channel,transaction_uuid,user){
+			$method = 'GET';
+			$url = caribedevelopers_server + "/b/" + customer_uuid;
+			//$url = caribedevelopers_server + "/unusual_activity/" + 'ab03c2a1-7f81-4bdc-9c71-9a62fcf56b88';
+			$.getJSON($url, function(data) {
+				
+				if (data.code == 'OK')
+				{
+					caribedev_view_unusual_activity_ok(data);
+					}else{
+					caribedev_view_unusual_activity_error(data);
+				}
+			});
+		}
+		
+		function caribedev_view_unusual_activity_ok (data){
+			if(data.unusual_activity.length>0){
+				$('#unusual_activity_description').val(data.unusual_activity[0].unusual_activity_description);
+				$('#unusual_activity_possible_scam').val(data.unusual_activity[0].unusual_activity_possible_scam)
+			}
+			function caribedev_view_unusual_activity_error() {
+				alert('Sorry, here was an error listing the item');
+			}
+		}
+		
+		function caribedev_view_transaction(channel,transaction_uuid,user){
+			$method = 'GET';
+			$url = caribedevelopers_server + "/b/" + customer_uuid;
+			//$url = caribedevelopers_server + "/transaction/" + '935dd2d7-6b7c-4ed8-b96e-b999c91e2d75';
+			$.getJSON($url, function(data) {
+				
+				if (data.code == 'OK')
+				{
+					caribedev_view_transaction_ok(data);
+					}else{
+					caribedev_view_transaction_error(data);
+				}
+			});
+		}
+		
+		function caribedev_view_transaction_ok (data){
+			if(data.transaction.length>0){
+				$('#transaction_amount').val(data.transaction[0].transaction_amount);
+				$('#transaction_currency').val(data.transaction[0].transaction_currency);
+				$('#transaction_relation_contact_person').val(data.transaction[0].transaction_relation_contact_person);
+				$('#transaction_know_contact_person').val(data.transaction[0].transaction_know_contact_person);
+				$('#transaction_reason').val(data.transaction[0].transaction_reason);
+				$('#transaction_branch_id').val(data.transaction[0].transaction_branch_id);
+				$('#transaction_employee').val(data.transaction[0].transaction_employee);
+				$('#transaction_type').val(data.transaction[0].transaction_type);
+				$('#transaction_mtcn_number').val(data.transaction[0].transaction_mtcn_number);
+				$('#transaction_reason_refund').val(data.transaction[0].transaction_reason_refund);
+				$('#transaction_reported_mot').val(data.transaction[0].transaction_reported_mot)
+			}
+			function caribedev_view_transaction_error() {
+				alert('Sorry, here was an error listing the item');
+			}
+		}
+		
+		function caribedev_view_source_fund(channel,transaction_uuid,user){
+			$method = 'GET';
+			$url = caribedevelopers_server + "/b/" + customer_uuid;
+			//$url = caribedevelopers_server + "/source_fund/" + 'f66107e7-1f85-4616-b0a1-9f6acf996f66';
+			$.getJSON($url, function(data) {
+				
+				if (data.code == 'OK')
+				{
+					caribedev_view_source_fund_ok(data);
+					}else{
+					caribedev_view_source_fund_error(data);
+				}
+			});
+		}
+		
+		function caribedev_view_source_fund_ok (data){
+			if(data.source_fund.length>0){
+				$('#sof_description').val(data.source_fund[0].sof_description);
+				$('#sof_department').val(data.source_fund[0].sof_department);
+				$('#sof_occupation').val(data.source_fund[0].sof_occupation);
+				$('#sof_company_name').val(data.source_fund[0].sof_company_name);
+				$('#sof_employer_name').val(data.source_fund[0].sof_employer_name);
+				$('#sof_employer_occupation').val(data.source_fund[0].sof_employer_occupation);
+				$('#sof_awg10').val(data.source_fund[0].sof_awg10);
+				$('#sof_awg25').val(data.source_fund[0].sof_awg25);
+				$('#sof_awg50').val(data.source_fund[0].sof_awg50);
+				$('#sof_awg100').val(data.source_fund[0].sof_awg100);
+				$('#sof_usd1').val(data.source_fund[0].sof_usd1);
+				$('#sof_usd5').val(data.source_fund[0].sof_usd5);
+				$('#sof_usd10').val(data.source_fund[0].sof_usd10);
+				$('#sof_usd20').val(data.source_fund[0].sof_usd20);
+				$('#sof_usd50').val(data.source_fund[0].sof_usd50);
+				$('#sof_usd100').val(data.source_fund[0].sof_usd100)
+			}
+			function caribedev_view_source_fund_error() {
+				alert('Sorry, here was an error listing the item');
+			}
+		}
+		
+	</script>
+	
+	
+</body>
+</html>

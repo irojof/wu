@@ -1,0 +1,47 @@
+.fg-line:not([class*=has-]):after {
+  background: #9E9E9E;
+}
+
+.bold{
+
+  font-weight: bold;
+}
+
+.buttonxl {
+ border-radius: 100%;
+ width: 80px;
+ line-height: 84px;
+ height: 80px;
+ padding: 0;
+ text-align: center;
+ font-size:350%
+}
+
+.reg-table-transactions {
+font-size: 125%;
+vertical-align:bottom;
+}
+
+.red{
+
+color: red;
+font-size: 150%;
+
+}
+.redmonitoring{
+color: red;
+font-size: 120%;
+}
+.redrating{
+color: red;
+font-size: 120%;
+}
+.yellowrating{
+color: yellow;
+font-size: 120%;
+
+}
+.greenrating{
+color: green;
+font-size: 120%;
+}

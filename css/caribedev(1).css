@@ -1,0 +1,73 @@
+/*MENU CONFIGURATION*/
+[data-current-skin="black"] {
+  background-color: #000000;
+}
+[data-current-skin="black"] .ss-icon {
+  color: #000000;
+}
+@media (max-width: 767px) {
+  [data-current-skin="black"] .ha-menu {
+    background: #000000;
+  }
+}
+
+
+.icon-lg {
+  font-size: 12em;
+  line-height: 1em;
+  vertical-align: -15%;
+}
+
+.icon-md {
+  font-size: 6em;
+  line-height: 1em;
+  vertical-align: -15%;
+}
+
+.rounded {
+  border-radius: 25px;
+}
+
+.home-icon {
+	border-radius: 25px;
+}
+
+.home-icon .card-header {
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+
+body.login-content_wu {
+  text-align: center;
+}
+
+body.login-content_wu:after {
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+}
+
+body.login-content_wu:before {
+  /*height: 50%;
+  width: 100%;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFC107;
+  content: "";
+  z-index: 0;
+}
+.login-content_wu {
+  overflow: hidden;
+  height: 100%;
+}
+
+
+body  {
+background: linear-gradient(to bottom, #000000 0%,#000000 50%,#FFC107 50%,#FFC107 50%,#FFC107 100%);
+z-index: 1;
+
+}

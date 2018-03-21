@@ -1,0 +1,1437 @@
+﻿<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Western Union</title>
+	
+	<!-- Vendor CSS -->
+	<link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+	<link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+	<link href="vendors/bower_components/nouislider/distribute/jquery.nouislider.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+	<link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
+	<link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+	
+	<!-- CSS -->
+	<link href="css/app.min.1.css" rel="stylesheet">
+	<link href="css/app.min.2.css" rel="stylesheet">
+    <link href="css/caribedev.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	<!--#include file="header.aspx"-->
+	<section id="main">
+		<section id="content">
+			<div class="container">
+				<div class="block-header">
+					<h2>Customer</h2>
+				</div>
+				<!-- START CONTENT -->
+				<form id="frm_customer" name="frm_customer" method='PUT'>
+					<input hidden name="customer_system_risk_raiting" id="customer_system_risk_raiting" value="1"/>
+					<div class="card">
+						<div class="card-header ch-alt">
+							<h2>Edit Customer</h2>
+						</div>
+						<div class="card-body card-padding">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="col-md-6">
+										<div class="row">
+											<br>
+											<div class=" col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input required type="text" class="form-control input-lg" id="customer_wu_card_number" name="customer_wu_card_number" placeholder="WU card number">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<br>
+											<div class=" col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input required type="text" class="form-control input-lg" id="customer_id_card" name="customer_id_card" placeholder="ID card">
+													</div>
+												</div>
+											</div>
+										</div>
+                                        <div class="row">
+											<br>
+											<div class=" col-md-12">
+												<div class="input-group">
+												    <span class="input-group-addon"><i class="zmdi zmdi-file"></i></span>
+												    <div class="fg-line">
+													    <div class="select">
+														    <select class="form-control input-lg" id="customer_type_id_card" name="customer_type_id_card">
+															    <option>Type of ID card</option>
+															    <option value="1">National ID (Type of file)</option>
+															    <option value="2">Driver´s license (Type of file)</option>
+															    <option value="3">Passport (Type of file)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+                                        <div class="row">
+										    <br>
+                                            <div class=" col-md-12">
+											    <div class="input-group">
+												    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+												    <div class="fg-line">
+													    <input type="text" required class="form-control date-picker input-lg" id="customer_id_card_expiration_date" name="customer_id_card_expiration_date" placeholder="Expiration date ID Card">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<br>
+											<div class=" col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input required type="text" class="form-control input-lg" id="customer_first_name" name="customer_first_name" placeholder="First Name">
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input type="text" required class="form-control input-lg" id="customer_last_name" name="customer_last_name" placeholder="Last Name">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input type="text" required class="form-control input-lg" id="customer_middle_name" name="customer_middle_name" placeholder="Middle Name">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+													<div class="fg-line">
+														<input type="text" required class="form-control date-picker input-lg" id="customer_date_birth" name="customer_date_birth" name="customer_date_birth" placeholder="Birth Date">
+													</div>
+												</div>
+											</div>
+										</div>
+                                        
+										<div class="row">
+											<br>
+											<div class="col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-city"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="customer_place_birth" name="customer_place_birth" placeholder="Birth Place">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<br>
+											<div class="col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-map"></i></span>
+													<div class="fg-line">
+														<input type="text"  required class="form-control input-lg" id="customer_nacionality" name="customer_nacionality" placeholder="Nationality">
+													</div>
+												</div>
+											</div>
+										</div>
+									    <div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+													<div class="fg-line">
+                                                        <input type="text" required class="form-control input-lg" id="customer_email" name="customer_email" placeholder="Email">
+													</div>
+												</div>
+											</div>
+										</div>
+                                        <div class="row">
+											<br>
+											<div class=" col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-phone"></i></span>
+													<div class="fg-line">
+														<input required type="text" class="form-control input-lg" id="customer_phone" name="customer_phone" placeholder="Phone Number">
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									
+									<div class="col-md-6">
+										
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-smartphone"></i></span>
+													<div class="fg-line">
+														<input type="text" required class="form-control input-lg" id="customer_mobile" name="customer_mobile" placeholder="Mobile">
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="col-md-12">
+                                                <input type="hidden" id="customer_resident" name="customer_resident" value="" />
+            									<div class="row">
+										            <div class="col-md-12">
+                                                        <input type="hidden" id="Hidden1" name="customer_resident" value="" />
+											            <br>
+                                                        <div class="col-md-4">
+                                                            <p class="c-gray f-16">Residency:</p>
+														</div>
+                                                        <div class="col-md-4">
+                                                            <label class="checkbox checkbox-inline m-r-20 f-16 m-t-0">
+                                                                <input type="checkbox" id="customer_resident_r" name="customer_resident_r" value="1" />
+                                                                <i class="input-helper"></i>    
+                                                                Resident
+															</label>
+														</div>
+                                                        <div class="col-md-4">
+                                                            <label class="checkbox checkbox-inline m-r-20 f-16 m-t-0">
+                                                                <input type="checkbox" id="customer_resident_nr" name="customer_resident_nr" value="2" />
+                                                                <i class="input-helper"></i>    
+                                                                Non-resident
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+													<div class="fg-line">
+														<input type="text" required class="form-control input-lg" id="customer_reason_visit" name="customer_reason_visit" placeholder="Reason of visit">
+													</div>
+												</div>
+											</div>
+										</div>
+                                        
+										<div class="row">
+											<div class=" col-md-12">
+												<br>
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-time"></i></span>
+													<div class="fg-line">
+														<input required type="text" class="form-control input-lg" id="customer_length_stay" name="customer_length_stay" placeholder="Length stay">
+													</div>
+												</div>
+											</div>
+										</div>
+                                        
+                                        
+									    <div class="row">
+										    <div class="col-md-12">
+											    <br>
+											    <div class="input-group">
+												    <span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+												    <div class="fg-line">
+													    <div class="select">
+														    <select class="form-control input-lg" id="customer_pep" name="customer_pep">
+															    <option>Pep?</option>
+															    <option value="0">Yes (Pep)</option>
+															    <option value="1">No (Pep)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+									    <div class="row">
+										    <div class="col-md-12">
+											    <br>
+											    <div class="input-group">
+												    <span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+												    <div class="fg-line">
+													    <div class="select">
+														    <select class="form-control input-lg" id="customer_animeerdame" name="customer_animeerdame">
+															    <option value="-1">Animeerdame?</option>
+															    <option value="0">Yes (Animeerdame)</option>
+															    <option value="1">No (Animeerdame)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+                                        <div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+													<div class="fg-line">
+														<div class="select">
+															<select class="form-control input-lg" id="customer_fatf_country" name="customer_fatf_country">
+																<option value="-1">Fatf Country</option>
+																<option value="0">Yes</option>
+																<option value="1">No</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+                                        <div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+													<div class="fg-line">
+														<div class="select">
+															<select class="form-control input-lg" id="customer_cdd_required" name="customer_cdd_required">
+																<option value="-1">CDD required?</option>
+																<option value="0">Yes (CDD required)</option>
+																<option value="1">No (CDD required)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+                                        <div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+													<div class="fg-line">
+														<div class="select">
+															<select class="form-control input-lg" id="customer_soft_required" name="customer_soft_required">
+																<option value="-1">SOFT required?</option>
+																<option value="0">Yes (SOFT required)</option>
+																<option value="1">No (SOFT required)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+                                        <div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+													<div class="fg-line">
+														<div class="select">
+															<select class="form-control input-lg" id="customer_cdd_is_employed" name="customer_cdd_is_employed">
+																<option value="-1">Customer is employed?</option>
+																<option value="0">Yes (Employed)</option>
+																<option value="1">No (Employed)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+                                        
+                                        
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="card">
+						<div class="card-body card-padding">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="panel-group" data-collapse-color="amber" id="accordionAmber" role="tablist" aria-multiselectable="true">
+										<div class="panel panel-collapse">
+											<div class="panel-heading" role="tab">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordionAmber" href="#accordionAmber-1" aria-expanded="false">Address
+													</a>
+												</h4>
+											</div>
+											<div id="accordionAmber-1" class="collapse" role="tabpanel">
+												<div class="panel-body">
+													<div class="col-md-12">
+														<div class="col-md-4">
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_address_1" name="customer_address_1" placeholder="Address 1">
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_address_2" name="customer_address_2" placeholder="Address 2">
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														<div class="col-md-4">
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-city"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_city" name="customer_city" placeholder="City">
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-local-post-office"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_postal_code" name="customer_postal_code" placeholder="Postal Code">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_state_province_region" name="customer_state_province_region" placeholder="State, Province, Region ">
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-md-12">
+																	<br>
+																	<div class="input-group">
+																		<span class="input-group-addon"><i class="zmdi zmdi-money"></i></span>
+																		<div class="fg-line">
+																			<div class="select">
+																				<select class="form-control input-lg" id="country_id" name="country_id">
+																					<option>Country ID?</option>
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						
+						<div class="col-md-12"> <!--Income information-->
+							<div class="card">
+								<div class="card-header ch-alt">
+									<h2>Income information</h2>
+								</div>
+								<div class="card-body card-padding">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="row">
+												<div class="panel-body">
+													<div class="checkbox">
+														<div class="col-md-3">
+															<label>
+                                                                <input type="checkbox" id="customer_income_option_1" name="customer_income_option_1" />
+                                                                <i class="input-helper"></i>    
+                                                                Employed
+															</label>
+														</div>
+														<div class="col-md-3">
+															<label>
+                                                                <input type="checkbox" id="customer_income_option_2" name="customer_income_option_2" />
+                                                                <i class="input-helper"></i>    
+                                                                Self-employed
+															</label>
+														</div>
+														<div class="col-md-3">
+															<label>
+                                                                <input type="checkbox" id="customer_income_option_3" name="customer_income_option_3"/>
+                                                                <i class="input-helper"></i>    
+                                                                Student
+															</label>
+														</div>
+														<div class="col-md-3">
+															<label>
+                                                                <input type="checkbox" id="customer_income_option_4" name="customer_income_option_4" />
+                                                                <i class="input-helper"></i>    
+                                                                Unemployed
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<input hidden id="customer_type_income" name="customer_type_income" value="">
+						<input hidden id="customer_description_income" name="customer_description_income" value="">
+						<input hidden id="customer_freq_sallary_pay" name="customer_freq_sallary_pay" value="">
+						<input hidden id="customer_avg_net_sallary" name="customer_avg_net_sallary" value="">
+						
+						<div class="col-md-12"> <!--Employed-->
+							<div id="customer_employee_card" name="customer_employee_card" class="card">
+								<div class="card-header ch-alt">
+									<h2>Employed</h2>
+								</div>
+								<div class="card-body card-padding">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-phone"></i></span>
+															<div class="fg-line">
+																<input type="text"  class="form-control input-lg" id="customer_telnr_employer" name="customer_telnr_employer" placeholder="Employed phone">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+															<div class="fg-line">
+																<input type="text"  class="form-control input-lg" id="customer_employer_name" name="customer_employer_name" placeholder="Employed Name">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-pin-account"></i></span>
+															<div class="fg-line">
+																<input type="text"  class="form-control input-lg" id="customer_employer_address" name="customer_employer_address" placeholder="Employed Addres">
+															</div>
+														</div>
+													</div>
+												</div>																					    
+											</div>
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-wrench"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_occupation" name="customer_occupation" placeholder="Occupation">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-store"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_department" name="customer_department" placeholder="Department">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-local-atm"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_avg_net_sallary_employed" name="customer_avg_net_sallary" placeholder="Average Salary">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												
+												<div class="row">
+													
+													<br>
+													<br>
+													<input type="hidden" name="customer_freq_sallary_pay" id="customer_freq_sallary_pay" value=""/>
+													<p class="c-gray f-16">Frequency Salary:</p>
+													<div class="col-md-12">
+														<div class="radio m-b-15 input-lg">
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_daily_employed" type="radio" value="1">
+																	<i class="input-helper"></i>
+																	Daily
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_weekly_employed" type="radio" value="2">
+																	<i class="input-helper"></i>
+																	Weekly
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_bi_weekly_employed" type="radio" value="3">
+																	<i class="input-helper"></i>
+																	Bi-Weekly
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_monthly_employed" type="radio" value="4">
+																	<i class="input-helper"></i>
+																	Monthly
+																</label>
+															</div>
+														</div>
+														<br>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12"> <!--Student-->
+							<div id="customer_student_card" name="customer_student_card" class="card">
+								<div class="card-header ch-alt">
+									<h2>Student</h2>
+								</div>
+								<div class="card-body card-padding">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_school_name" name="customer_school_name" placeholder="School Name">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-text-format"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_school_course_grade" name="customer_school_course_grade" placeholder="Course Grade">
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<br>
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="col-md-12"> <!--Self-employed-->
+							<div id="customer_selfemployed_card" name="customer_selfemployed_card" class="card">
+								<div class="card-header ch-alt">
+									<h2>Self-employed</h2>
+								</div>
+								<div class="card-body card-padding">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+															<div class="fg-line">
+																<div class="select">
+																	<select class="form-control input-lg" id="customer_type_income_selfemployed" name="customer_type_income">
+																		<option>Type of income?</option>
+																		<option value="1">Own Business (Type of income)</option>
+																		<option value="2">Rent (Type of income)</option>
+																		<option value="3">Tips (Type of income)</option>
+																		<option value="4">Other (Type of income)</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-local-atm"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_avg_net_sallary_selfemployed" name="customer_avg_net_sallary" placeholder="Average Salary">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-text-format"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_description_income_selfemployed" name="customer_description_income" placeholder="Specify">
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<div class="row">
+													<br>
+													
+													<input type="hidden" name="customer_freq_sallary_pay" id="customer_freq_sallary_pay" value=""/>
+													<p class="c-gray f-16">Frequency Salary:</p>
+													<div class="col-md-12">
+														<div class="radio m-b-15 input-lg">
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_daily_selfemployed" type="radio" value="1" checked="checked">
+																	<i class="input-helper"></i>
+																	Daily
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_weekly_selfemployed" type="radio" value="2">
+																	<i class="input-helper"></i>
+																	Weekly
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_bi_weekly_selfemployed" type="radio" value="3">
+																	<i class="input-helper"></i>
+																	Bi-Weekly
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_monthly_selfemployed" type="radio" value="4">
+																	<i class="input-helper"></i>
+																	Monthly
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<br>
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-md-12"> <!--Unemployed-->
+							<div id="customer_unemployed_card" name="customer_unemployed_card" class="card">
+								<div class="card-header ch-alt">
+									<h2>Unemployed</h2>
+								</div>
+								<div class="card-body card-padding">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-local-atm"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="since" name="since" placeholder="Since">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+															<div class="fg-line">
+																<div class="select">
+																	<select class="form-control input-lg" id="customer_type_income_unemployed" name="customer_type_income">
+																		<option>Type of income?</option>
+																		<option value="1">Own Business (Type of income)</option>
+																		<option value="2">Rent (Type of income)</option>
+																		<option value="3">Tips (Type of income)</option>
+																		<option value="4">Other (Type of income)</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-local-atm"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_avg_net_sallary_unemployed" name="customer_avg_net_sallary" placeholder="Average Salary">
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-12">
+														<br>
+														<div class="input-group">
+															<span class="input-group-addon"><i class="zmdi zmdi-text-format"></i></span>
+															<div class="fg-line">
+																<input type="text" class="form-control input-lg" id="customer_description_income_unemployed" name="customer_description_income" placeholder="Specify">
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<div class="row">
+													<br>
+													
+													<input type="hidden" name="customer_freq_sallary_pay" id="customer_freq_sallary_pay" value=""/>
+													<p class="c-gray f-16">Frequency Salary:</p>
+													<div class="col-md-12">
+														<div class="radio m-b-15 input-lg">
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_daily_unemployed" type="radio" value="1" checked="checked">
+																	<i class="input-helper"></i>
+																	Daily
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_weekly_unemployed" type="radio" value="2">
+																	<i class="input-helper"></i>
+																	Weekly
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_bi_weekly_unemployed" type="radio" value="3">
+																	<i class="input-helper"></i>
+																	Bi-Weekly
+																</label>
+															</div>
+															<div class="col-md-3">
+																<label>
+																	<input name="customer_freq_sallary" id="customer_freq_sallary_pay_monthly_unemployed" type="radio" value="4">
+																	<i class="input-helper"></i>
+																	Monthly
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<br>
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					
+					<div class="card">
+						<div class="card-header ch-alt">
+							<h2>Files</h2>
+						</div>
+						<div class="card-body card-padding">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="row">
+										<div class=" col-md-12">
+											<div class="form-group">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="col-md-4">
+															<div class="row">
+																<div class="col-md-12">
+																	<br>
+																	<div class="input-group">
+																		<span class="input-group-addon"><i class="zmdi zmdi-file"></i></span>
+																		<div class="fg-line">
+																			<div class="select">
+																				<select class="form-control input-lg" id="customer_type_file" name="customer_type_file">
+																					<option>Type of file</option>
+																					<option value="1">National ID (Type of file)</option>
+																					<option value="2">Driver´s license (Type of file)</option>
+																					<option value="3">Passport (Type of file)</option>
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="row">
+																<div class="col-md-12">
+																	<br>
+																	<div class="input-group">
+																		<span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+																		<div class="fg-line">
+																			<input type="text" required class="form-control date-picker input-lg" id="customer_file_expired_date" name="customer_file_expired_date" placeholder="Expiration Date">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<br>
+															<div class="fileinput fileinput-new" data-provides="fileinput">
+																<span class="btn bgm-black btn-file m-r-10">
+																	<span class="fileinput-new">Select file</span>
+																	<span class="fileinput-exists">Slect another</span>
+																	<input type="file" id="customer_file_name" name="customer_file_name">
+																</span>
+																<span class="fileinput-filename"></span>
+																<a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<br>
+												<div class="row"><div class="col-md-6">
+													<div class="row">
+														
+													</div>
+												</div>
+												
+												</div>
+												<div class="row">
+													<div id="file_list"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 notifications row">
+							<div class="pull-right">
+								<button id="btn_customer_return" name="btn_customer_return" class="btn btn-default btn-lg">Return</button> &nbsp;
+								<button id="btn_customer_submit" name="btn_customer_submit" data-type="success" type="button" class="btn bgm-amber btn-lg">Save</button>
+							</div>
+						</div>
+					</div>
+					
+				</form>
+				<!-- END CONTENT -->
+			</div>
+		</section>
+	</section>
+	
+	<footer id="footer">
+		Copyright &copy; 2016 Madworksglobal.com
+	</footer>
+	
+	<!-- Page Loader -->
+	<div class="page-loader">
+		<div class="preloader pls-blue">
+			<svg class="pl-circular" viewBox="25 25 50 50">
+				<circle class="plc-path" cx="50" cy="50" r="20" />
+			</svg>
+			
+			<p>Please wait...</p>
+		</div>
+	</div>
+	
+	
+	
+	<!-- Javascript Libraries -->
+	<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+	<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+	<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+	
+	<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+	<script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+	<script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+	<script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+	
+	<!-- Placeholder for IE9 -->
+	<!--[if IE 9 ]>
+		<script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+	<![endif]-->
+	<script src="vendors/bower_components/chosen/chosen.jquery.min.js"></script>
+	<script src="vendors/fileinput/fileinput.min.js"></script>
+	<script src="vendors/input-mask/input-mask.min.js"></script>
+	<script src="vendors/farbtastic/farbtastic.min.js"></script>
+	
+	<script src="js/functions.js"></script>
+	<script src="js/caribedev.js"></script>
+	
+	
+	<script type="text/javascript">
+		
+	    $(document).ready(function () {
+			
+	        caribedev_list_country();
+		});
+		
+		
+		$("#customer_employee_card").hide();
+		$("#customer_selfemployed_card").hide();
+		$("#customer_student_card").hide();
+		$("#customer_unemployed_card").hide();
+		
+		$('input[type="checkbox"]').change(function () {
+			if ((($(this).attr("name")) == "customer_income_option_1")) {
+				
+				if (($(this).prop("checked")))
+				{
+					$('#customer_income_option_4').prop("checked", "");
+					$('#customer_income_option_2').prop("checked", "");
+					$("#customer_selfemployed_card").hide();
+					$("#customer_unemployed_card").hide();
+					$("#customer_employee_card").show();
+				}
+				else
+				{
+					$("#customer_employee_card").hide();
+				}
+			}
+			if ((($(this).attr("name")) == "customer_income_option_2")) {
+				
+				if (($(this).prop("checked")))
+				{
+					$('#customer_income_option_1').prop("checked", "");
+					$('#customer_income_option_4').prop("checked", "");
+					$("#customer_employee_card").hide();
+					$("#customer_unemployed_card").hide();
+					$("#customer_selfemployed_card").show();
+				}
+				else
+				{
+					$("#customer_selfemployed_card").hide();
+				}
+			}
+			if ((($(this).attr("name")) == "customer_income_option_3")) {
+				
+				if (($(this).prop("checked")))
+				{
+					$("#customer_student_card").show();
+				}
+				else
+				{
+					$("#customer_student_card").hide();
+				}
+			}
+			if (($(this).attr("name")) == "customer_income_option_4") {
+				
+				if (($(this).prop("checked")))
+				{
+					$('#customer_income_option_1').prop("checked", "");
+					$('#customer_income_option_2').prop("checked", "");
+					$("#customer_employee_card").hide();
+					$("#customer_selfemployed_card").hide();
+					$("#customer_unemployed_card").show();
+				}
+				else
+				{
+					$("#customer_unemployed_card").hide();
+				}
+				
+			}
+			
+		})
+		.filter(function () {
+			return $(this).prop("checked");
+		})
+		.trigger("change");
+		
+	</script>
+	
+	<script type="text/javascript">
+		
+		function getParam(key) {
+			// Find the key and everything up to the ampersand delimiter
+			var value = RegExp("" + key + "[^&]+").exec(window.location.search);
+			
+			// Return the unescaped value minus everything starting from the equals sign or an empty string
+			return unescape(!!value ? value.toString().replace(/^[^=]+./, "") : "");
+		}
+		
+		$(function () {
+			
+			caribedev_list_country();
+			caribedev_view_customer('', getParam('customer_uuid'), '');
+			
+			$('input[type="radio"]')
+			.change(function () {
+				if ($(this).attr("value") == "1") {
+					$(".customer_radio").not(".customer_employee_card").hide();
+					$(".customer_employee_card").show();
+				}
+				if ($(this).attr("value") == "2") {
+					$(".customer_radio").not(".customer_student_card").hide();
+					$(".customer_student_card").show();
+				}
+				
+			})
+			.filter(function () {
+				return $(this).prop("checked");
+			})
+			.trigger("change");
+		});
+		function caribedev_view_customer(channel, customer_uuid, user) {
+			
+			method = 'GET';
+			
+			url = caribedevelopers_server + "/customer/" + customer_uuid;
+			$.getJSON(url, function (data) {
+				
+				if (data.code == 'OK') {
+					caribedev_view_customer_ok(data);
+					} else {
+					
+					caribedev_view_customer_error(data);
+				}
+			});
+			
+			
+		}
+		
+		function caribedev_view_customer_ok(data) {
+			
+			
+			if (data.customer.length > 0) {
+				
+				$('#customer_wu_card_number').val(data.customer[0].customer_wu_card_number);
+				$('#customer_id_card').val(data.customer[0].customer_id_card);
+				$('#customer_type_id_card').val(data.customer[0].customer_type_id_card);
+				$('#customer_id_card_expiration_date').val(data.customer[0].customer_id_card_expiration_date);
+				$('#customer_first_name').val(data.customer[0].customer_first_name);
+				$('#customer_last_name').val(data.customer[0].customer_last_name);
+				$('#customer_middle_name').val(data.customer[0].customer_middle_name);
+				$('#customer_date_birth').val(data.customer[0].customer_date_birth);
+				$('#customer_place_birth').val(data.customer[0].customer_place_birth);
+				$('#customer_nacionality').val(data.customer[0].customer_nacionality);
+				$('#customer_email').val(data.customer[0].customer_email);
+				$('#customer_phone').val(data.customer[0].customer_phone);
+				$('#customer_mobile').val(data.customer[0].customer_mobile);
+				(data.customer[0].customer_resident ? $("#customer_resident_r[value='1']").prop("checked", "checked") : $("#customer_resident_nr[value='2']").prop("checked", "checked"));
+				$("#customer_pep option[value='"+ (data.customer[0].customer_pep ? '1' : '0') + "']").prop("selected", "selected");
+				$("#customer_animeerdame option[value='"+ (data.customer[0].customer_animeerdame ? '1' : '0') + "']").prop("selected", "selected");
+				$("#customer_fatf_country option[value='"+ (data.customer[0].customer_fatf_country ? '1' : '0') + "']").prop("selected", "selected");
+				$("#customer_cdd_required option[value='"+ (data.customer[0].customer_cdd_requerid ? '1' : '0') + "']").prop("selected", "selected");
+				$("#customer_soft_required option[value='"+ (data.customer[0].customer_sof_requerid ? '1' : '0') + "']").prop("selected", "selected");
+				$("#customer_cdd_is_employed option[value='"+ (data.customer[0].customer_cdd_is_employed ? '1' : '0') + "']").prop("selected", "selected");
+				$('#customer_address_1').val(data.customer[0].customer_address_1);
+				$('#customer_address_2').val(data.customer[0].customer_address_2);
+				$('#customer_city').val(data.customer[0].customer_city);
+				$('#customer_postal_code').val(data.customer[0].customer_postal_code);
+				$('#customer_state_province_region').val(data.customer[0].customer_state_province_region);
+				$('#country_id').val(data.customer[0].country_id);
+				$('#customer_telnr_employer').val(data.customer[0].customer_telnr_employer);
+				$('#customer_employer_name').val(data.customer[0].customer_employer_name);
+				$('#customer_employer_address').val(data.customer[0].customer_employer_address);
+				$('#customer_occupation').val(data.customer[0].customer_occupation);
+				$('#customer_department').val(data.customer[0].customer_department);
+				$('#customer_avg_net_sallary').val(data.customer[0].customer_avg_net_sallary);
+				$('#customer_freq_sallary_pay').val(data.customer[0].customer_freq_sallary_pay);
+				$('#customer_school_name').val(data.customer[0].customer_school_name);
+				$('#customer_school_course_grade').val(data.customer[0].customer_school_course_grade);
+				$('#customer_unemployed_since').val(data.customer[0].customer_unemployed_since);
+				$('#customer_type_income').val(data.customer[0].customer_type_income);
+				$('#customer_description_income').val(data.customer[0].customer_description_income);
+				$('#since').val(data.customer[0].since);
+				
+				
+				// Rule: No resident
+				if (!data.customer[0].customer_resident) {
+					$('#customer_length_stay').val(data.customer[0].customer_length_stay);
+				}
+				else {
+					$('#customer_length_stay').val('N/A');
+				}
+				
+				
+				//switch (data.customer[0].customer_reason_visit) {
+				//    case "1": { break; }
+				//    case "2": { break; }
+				//    case "3": { break; }
+				//    case "4": { break; }
+				//    default: { }
+				//}
+				
+				
+				$('#customer_reason_visit').val(data.customer[0].customer_reason_visit);
+				$('#customer_cdd').val(data.customer[0].customer_cdd);
+				$('#customer_sof').val(data.customer[0].customer_sof)
+				
+				
+			}
+		}
+		
+	</script>
+	
+	<script type="text/javascript">
+		
+	    function stopRKey(evt) {
+	        var evt = (evt) ? evt : ((event) ? event : null);
+	        var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+	        if ((evt.keyCode == 13) && (node.type == "text")) { return false; }
+		}
+		
+	    document.onkeypress = stopRKey;
+		
+		
+	    function getParam(key) {
+	        // Find the key and everything up to the ampersand delimiter
+	        var value = RegExp("" + key + "[^&]+").exec(window.location.search);
+			
+	        // Return the unescaped value minus everything starting from the equals sign or an empty string
+	        return unescape(!!value ? value.toString().replace(/^[^=]+./, "") : "");
+		}
+		
+	    function caribedev_customer_edit(input) {
+	        $method = "PUT";
+	        $url = caribedevelopers_server + "/customer/" + getParam('customer_uuid');
+			
+	        $('#customer_resident').val(($('#customer_resident_r').prop('checked') ? '1' : '0'));
+	        if ($('#customer_freq_sallary_pay_daily').prop('checked'))
+			$('#customer_freq_sallary_pay').val('1');
+	        if ($('#customer_freq_sallary_pay_daily').prop('checked'))
+			$('#customer_freq_sallary_pay').val('2');
+	        if ($('#customer_freq_sallary_pay_daily').prop('checked'))
+			$('#customer_freq_sallary_pay').val('3');
+	        if ($('#customer_freq_sallary_pay_daily').prop('checked'))
+			$('#customer_freq_sallary_pay').val('4');
+			
+			
+	        if ($(input).is("frm_customer")) {
+	            var element_data = $(input).serialize();
+	            var element_content = "application/x-www-form-urlencoded";
+				} else {
+	            var element_data = input;
+	            var element_content = "application/x-www-form-urlencoded";
+			}
+			
+	        $('.frm_customer').val(getParam('customer_uuid'));
+	        //$('.frm_customer').val('935dd2d7-6b7c-4ed8-b96e-b999c91e2d75');
+	        $.ajax({
+	            type: $method,
+	            url: $url,
+	            contentType: element_content,
+	            data: $('#frm_customer').serialize(),
+	            dataType: 'text',
+				
+				}).done(function (data) {
+	            if ($(data).find("Error").text() != '') //DO IF RESPONSE ERROR
+	            {
+	                caribedev_customer_edit_error(data);
+					
+				} else //DO IF RESPONSE OK
+	            {
+	                caribedev_customer_edit_ok(data);
+				}
+			});
+		}
+		
+	    function caribedev_list_country() {
+	        $method = 'GET';
+	        $url = caribedevelopers_server + "/country";
+	        $.getJSON($url, function (data) {
+	            if (data.code == 'OK') {
+	                caribedev_list_country_ok(data);
+				}
+			});
+		}
+		
+	    function caribedev_list_country_ok(data) {
+	        if (data.country.length > 0) {
+	            for (i = 0; i < data.country.length; i++) {
+	                $("#country_id").append('<option value="' + data.country[i].country_id + '">' + data.country[i].country_description + '</option>');
+				}
+			}
+		}
+		
+	    $("#btn_customer_return").click(function () {
+	        window.location.href = 'customer_list.aspx';
+		});
+		
+	    $("#btn_customer_submit").click(function () {
+			caribedev_customer_edit("#frm_customer");
+	        
+		});
+		
+	    function caribedev_customer_edit_ok(data) {
+	        //  console.log(data);
+		}
+		
+	    function caribedev_customer_edit_error(data) {
+	        //  console.log(data);
+		}
+		
+		
+	</script>
+	
+    <script>
+		
+        //****Functions to upload file***
+		
+        var server = caribedevelopers_server_ip; //Upload Server
+		
+        //Capture the file selection
+        $("input:file").change(function () {
+			
+            if ($('#customer_file_expired_date').val() != '' && $('#customer_type_file').val() != '')
+			caribedev_upload($(this));
+            else {
+                // TODO: Alert
+                alert('Please complete the fields type and date of expiration of documents');
+                $('#customer_file_name').val('');
+			}
+			
+		});
+		
+        //Delete files		
+        $('#btn_file_delete').click(function () {
+            $('#customer_file_name').val('');
+            $('#file_list').text('');
+		});
+		
+        //Function upload
+        function caribedev_upload(input) {
+            $method = "POST";
+            $url = "http://" + server + "/upload/upload.svc/file";
+			
+            var file_data = $(input).prop("files")[0];
+            var form_data = new FormData();
+            form_data.append("file", file_data);
+			
+            $.ajax({
+                url: $url,
+                dataType: 'multipart/form-data',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: form_data,
+                type: $method,
+                complete: function (data) {
+                    caribedev_upload_ok(data);
+				}
+			});
+		}
+		
+        //Callback upload
+        function caribedev_upload_ok(data) {
+            var response = $(data.responseText).find("FileUploadResult").text();
+            file = $(response).find("guid").text();
+            file_type = $('#customer_file_type').val();
+            expired_date = $('#customer_file_expired_date').val();
+			
+            $('#file_list').append('<div class="col-md-3"><a href="http://' + server + '/files/' + file + '" target="_blank"><img class="img-thumbnail" src="http://' + server + '/files/' + file + '"/></a><a href></div>');
+			
+            if ($('#customer_file_name').val() == '') {
+                $('#customer_file_name').val(file);
+                $('#customer_file_type').val(file_type);
+                $('#customer_file_expired_date').val(expired_date);
+			}
+            else {
+                $('#customer_file_name').val($('#customer_file_name').val() + ',' + file);
+                $('#customer_file_type').val($('#customer_file_type').val() + ',' + file);
+                $('#customer_file_expired_date').val($('#customer_file_expired_date').val() + ',' + file);
+			}
+			
+            $('#customer_file_name').val('');
+            $('#customer_file_type').val('');
+            $('#customer_file_expired_date').val('');
+		}
+		
+	</script>
+	
+</body>
+</html>

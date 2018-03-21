@@ -1,0 +1,8 @@
+.fg-line:not([class*=has-]):after {
+  background: #9E9E9E;
+}
+
+.bold{
+
+  font-weight: bold;
+}

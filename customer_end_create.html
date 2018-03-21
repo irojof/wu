@@ -1,0 +1,396 @@
+﻿<!-- <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="customer_end_create.aspx.cs" Inherits="wus_site.customer_end_create" %> -->
+
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Western Union</title>
+
+	<!-- Vendor CSS -->
+	<link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+	<link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+	<link href="vendors/bower_components/nouislider/distribute/jquery.nouislider.min.css" rel="stylesheet">
+	<link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+	<link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
+	<link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+
+	<!-- CSS -->
+	<link href="css/app.min.1.css" rel="stylesheet">
+	<link href="css/app.min.2.css" rel="stylesheet">
+    <link href="css/caribedev.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<!--#include file="header.aspx"-->
+	<section id="main">
+		<section id="content">
+			<div class="container">
+				<div class="block-header">
+					<h2>Customer end</h2>
+				</div>
+				<!-- START CONTENT -->
+				<form id="frm_customer" name="frm_customer">
+					<input hidden name="customer_system_risk_raiting" id="customer_system_risk_raiting" value="1"/>
+					<input hidden name="customer_parent_uuid" id="customer_parent_uuid">
+					<input hidden name="customer_end_uuid" id="customer_end_uuid">
+
+					<div class="card">
+						<div class="card-header ch-alt">
+							<h2>New Customer end</h2>
+						</div>
+						<div class="card-body card-padding">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="col-md-6">
+										<div class="row">
+											<br>
+											<div class=" col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input required type="text" class="form-control input-lg" id="customer_first_name" name="customer_first_name" placeholder="First Name">
+													</div>
+												</div>
+											</div>
+										</div>
+                    <div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input type="text" required class="form-control input-lg" id="customer_middle_name" name="customer_middle_name" placeholder="Middle Name">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+													<div class="fg-line">
+														<input type="text" required class="form-control input-lg" id="customer_last_name" name="customer_last_name" placeholder="Last Name">
+													</div>
+												</div>
+											</div>
+										</div>
+                    <div class="row">
+											<br>
+											<div class=" col-md-12">
+												<div class="input-group ">
+													<span class="input-group-addon"><i class="zmdi zmdi-phone"></i></span>
+													<div class="fg-line">
+														<input required type="text" class="form-control input-lg" id="customer_phone" name="customer_phone" placeholder="Phone Number">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-body card-padding">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="panel-group" data-collapse-color="amber" id="accordionAmber" role="tablist" aria-multiselectable="true">
+										<div class="panel panel-collapse">
+											<div class="panel-heading" role="tab">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordionAmber" href="#accordionAmber-three" aria-expanded="false">Address
+													</a>
+												</h4>
+											</div>
+											<div id="accordionAmber-three" role="tabpanel">
+												<div class="panel-body">
+													<div class="col-md-12">
+														<div class="col-md-4">
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_address_1" name="customer_address_1" placeholder="Address 1">
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_address_2" name="customer_address_2" placeholder="Address 2">
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="col-md-4">
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-city"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_city" name="customer_city" placeholder="City">
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-local-post-office"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_postal_code" name="customer_postal_code" placeholder="Postal Code">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+																	<div class="fg-line">
+																		<input type="text" required class="form-control input-lg" id="customer_state_province_region" name="customer_state_province_region" placeholder="State, Province, Region ">
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<br>
+																<div class="input-group">
+																	<span class="input-group-addon"><i class="zmdi zmdi-money"></i></span>
+																	<div class="fg-line">
+																		<div class="select">
+																			<select class="form-control input-lg" id="country_id" name="country_id">
+																				<option>Country ID?</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-12 notifications row">
+							<div class="pull-right">
+								<button id="btn_customer_return" name="btn_customer_return" class="btn btn-default btn-lg">Return</button> &nbsp;
+								<button id="btn_customer_submit" name="btn_customer_submit" type="button" data-type="success" class="btn bgm-amber btn-lg">Save</button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+				<!-- END CONTENT -->
+			</div>
+		</section>
+	</section>
+
+	<footer id="footer">
+		Copyright &copy; 2016 Madworksglobal.com
+	</footer>
+
+	<!-- Page Loader -->
+	<div class="page-loader">
+		<div class="preloader pls-blue">
+			<svg class="pl-circular" viewBox="25 25 50 50">
+				<circle class="plc-path" cx="50" cy="50" r="20" />
+			</svg>
+
+			<p>Please wait...</p>
+		</div>
+	</div>
+
+
+
+	<!-- Javascript Libraries -->
+	<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+	<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+
+	<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+	<script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+	<script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+	<script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+	<script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+
+	<!-- Placeholder for IE9 -->
+	<!--[if IE 9 ]>
+		<script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+	<![endif]-->
+	<script src="vendors/bower_components/chosen/chosen.jquery.min.js"></script>
+	<script src="vendors/fileinput/fileinput.min.js"></script>
+	<script src="vendors/input-mask/input-mask.min.js"></script>
+	<script src="vendors/farbtastic/farbtastic.min.js"></script>
+
+	<script src="js/functions.js"></script>
+	<script src="js/caribedev.js"></script>
+
+
+	<script type="text/javascript">
+
+	    function getParam(key) {
+	        // Find the key and everything up to the ampersand delimiter
+	        var value = RegExp("" + key + "[^&]+").exec(window.location.search);
+
+	        // Return the unescaped value minus everything starting from the equals sign or an empty string
+	        return unescape(!!value ? value.toString().replace(/^[^=]+./, "") : "");
+	    }
+
+	    $(document).ready(function () {
+	        caribedev_list_country();
+	    });
+
+	    function caribedev_customer_end_create() {
+	        method = "POST";
+	        url = caribedevelopers_server + "/customer";
+	        //$url = 'http://server-tomcatcaribedev.rhcloud.com/test_service/test';
+
+
+	        $('.frm_customer').val(getParam('customer_uuid'));
+
+	        $.ajax({
+	            type: method,
+	            url: url,
+	            data: $('#frm_customer').serialize(),
+	            success: function (data) {
+
+	                if (data.code != 'OK') {
+	                    caribedev_customer_end_create_error(data);
+
+	                } else {
+	                    caribedev_customer_end_create_ok(data);
+	                }
+	            }
+	        });
+
+
+	        //$('.frm_customer').val('935dd2d7-6b7c-4ed8-b96e-b999c91e2d75');
+	        //$.ajax({
+	        //    type: method,
+	        //    url: url,
+	        //    contentType: 'application/x-www-form-urlencoded',
+	        //    data: $('#frm_customer').serialize(),
+	        //    dataType: 'text'
+	        //}).done(function (data) {
+	        //    if ($(data).find("Error").text() != '')
+	        //    {
+	        //        caribedev_customer_create_error(data);
+
+	        //    } else
+	        //    {
+	        //        caribedev_customer_create_ok(data);
+	        //    }
+	        //});
+	    }
+
+	    function caribedev_customer_end_create_ok(data) {
+	        //  Create a relation bettwen
+	      alert('se creo el usuario');
+	            caribedev_customer_end_relation_create(data.uuid);
+        }
+
+	    function caribedev_customer_end_create_error(data) {
+	        console.log(data);
+	        notify(undefined, undefined, undefined, 'danger', undefined, undefined, 'Sorry, there was an error creating a Customer End');
+	    }
+
+	    function caribedev_customer_end_relation_create(data) {
+
+	        $method = "POST";
+	        $url = caribedevelopers_server + "/customer_relation";
+
+					$('#customer_parent_uuid').val('customer_uuid');
+	        $('#customer_end_uuid').val(data);
+
+
+	        //$('.frm_customer').val('935dd2d7-6b7c-4ed8-b96e-b999c91e2d75');
+	        $.ajax({
+	            type: $method,
+	            url: $url,
+	            contentType: "application/x-www-form-urlencoded",
+	            data: $('#frm_customer').serialize(),
+	            dataType: 'text'
+	        }).done(function (data) {
+	            if (data.code != 'OK') {
+	                caribedev_customer_end_relation_create_error(data);
+
+	            } else {
+	                caribedev_customer_end_relation_create_ok(data);
+	            }
+	        });
+	    }
+
+	    function caribedev_customer_end_relation_create_error(data) {
+
+	        console.log(data);
+	        notify(undefined, undefined, undefined, 'danger', undefined, undefined, 'Sorry, there was an error creating a Customer End');
+
+	    }
+
+	    function caribedev_customer_end_relation_create_ok() {
+
+				alert('se creo la relacion')
+
+	        // notify(undefined, undefined, undefined, 'info', undefined, undefined, 'Customer End created succesfully');
+	        // window.location.href = 'customer_end_list.aspx?customer_uuid=' + getParam('customer_uuid');
+	    }
+
+	    function caribedev_list_country() {
+	        $method = 'GET';
+	        $url = caribedevelopers_server + "/country";
+	        $.getJSON($url, function (data) {
+	            if (data.code == 'OK') {
+	                caribedev_list_country_ok(data);
+	            }
+	        });
+	    }
+
+	    function caribedev_list_country_ok(data) {
+	        if (data.country.length > 0) {
+	            for (i = 0; i < data.country.length; i++) {
+	                $("#country_id").append('<option value="' + data.country[i].country_id + '">' + data.country[i].country_description + '</option>');
+	            }
+	        }
+	    }
+
+
+	    $("#btn_customer_submit").click(function () {
+	        caribedev_customer_end_create();
+	    })
+
+	    $("#btn_customer_return").click(function () {
+	        window.location.href = 'customer_view.aspx?customer_uuid=' + getParam('customer_uuid');
+	    })
+
+
+	</script>
+
+</body>
+</html>
